@@ -1,38 +1,21 @@
 ---
-title: Hello World
+title: hello-world
 ---
-Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
 
-## Quick Start
+个人站点第一篇文章。
 
-### Create a new post
+## 为什么要搭它
+其实之前试过直接托管在 `git page`, 不过几年了也没写过，就是搭建的时候一时爽。后来国内发现github也越来越慢了。。 
+然后最近在个人技术层面上面有点怀疑自己，准备好好写一些东西总结一下毕业三年来做了些什么，学了些什么。
+之前一直占着`linguochi.com`这个域名的哥们凑巧不再续费了，我终于等到了我自己的名字域名，一下续费了9年。名字域名用来写日记写帖子最适合不过了。啊哈哈哈。
 
-``` bash
-$ hexo new "My New Post"
-```
+## 搭建过程
 
-More info: [Writing](https://hexo.io/docs/writing.html)
+1. 使用 `hexo` 部署的纯静态站点；
+1. 使用`git webhook`在文章有更新`push`时，自动推送文章到站点上；没有上`jenkins`,因为我的主机跑不动；
+1. 使用 `nginx-proxy` 自动为服务器上的 `vhosts` 配置域名；
+1. 使用 `letsencrypt` 自动申请`https ssl证书`；
+1. 以上的各项均采用的`docker`容器，并用`docker-compose`做了编排；在切换主机的时候，仅需要拉取镜像然后一行`docker-compose up`就可以完成整个站点迁移；
+1. 所有这些均运行在个人腾讯云主机上面，目前是能买到的最屌丝的配置，1核1G内存；这台机器上还跑了我其他偷懒摸鱼的脚本；目前来看绰绰有余。
 
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+> 晚了，先这样。
