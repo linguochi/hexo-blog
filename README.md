@@ -1,1 +1,1 @@
-# hexo-blog
+# hexo-blog for linguochi
