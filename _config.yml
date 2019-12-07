@@ -8,8 +8,8 @@ subtitle: ''
 description: ''
 keywords:
 author: 林国池
-language: en
-timezone: ''
+language: zh-CN
+timezone: UTC
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -19,6 +19,26 @@ permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing index.html from permalinks
+
+# 外部链接优化
+nofollow:
+  enable: true
+  exclude:     # 例外的链接，可将友情链接放置此处
+    - 'yousite'
+
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 100
+
+symbols_count_time:
+  #文章内是否显示
+  symbols: true
+  time: true
+  # 网页底部是否显示
+  total_symbols: true
+  total_time: true
 
 # Directory
 source_dir: source
