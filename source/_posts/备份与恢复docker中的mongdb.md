@@ -1,5 +1,6 @@
 ---
 title: docker中MongoDB的备份与恢复
+author: 林国池
 ---
 
 > 使用docker方式启动了MongoDB，虽然指定了宿主机中的volume数据卷，但是在做服务器迁移时，关于数据库的迁移还是用数据库本身的导入导出比较安全。
