@@ -13,9 +13,9 @@ timezone: UTC
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://linguochi.com
+url: https://linguochi.com/
 root: /
-permalink: /post/:abbrlink.html
+permalink: post/:abbrlink.html
 permalink_defaults:
 abbrlink:
   alg: crc32  # 算法：crc16(default) and crc32
