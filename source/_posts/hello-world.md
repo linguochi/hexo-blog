@@ -1,5 +1,6 @@
 ---
 title: hello-world
+abbrlink: b1d4025b
 date: 2019-12-09 22:40:38
 tags:
 ---

@@ -1,5 +1,6 @@
 ---
 title: 借助docker搭建个人hexo博客
+abbrlink: 916ec1b6
 date: 2019-12-13 22:40:38
 tags:
 ---

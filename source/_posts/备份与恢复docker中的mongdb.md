@@ -1,6 +1,7 @@
 ---
 title: docker中MongoDB的备份与恢复
 author: 林国池
+abbrlink: ea08259b
 date: 2019-12-11 20:40:38
 tags:
 ---
