@@ -14,7 +14,7 @@ tags:
 docker真的太棒了，身边前端朋友都在学docker。 我也想学，除了工作上将自己负责的编辑器全部容器化后，觉得博客系统也适合用docker，来来回回研究了几天，实现的功能不多，但是坑却不少。好久不写文章，文笔不好，就直接开始吧。
 
 ## 实现功能
-1. 通过`webhook`在`git`仓库有`push`操作时自动触发服务器上的`hexo`站点更新；
+1. 通过`webhook`在`git`仓库有`push`操作时自动触发服务器上的`hexo`站点更新； 
 2. 根据`docker`配置自动为容器服务配置`nginx vhosts`和域名；
 3. 自动为所绑定的域名申请免费`ssl证书`使站点可以以`https`访问；
 4. 在`nginx`中配置`http`的`url`访问跳转到`https`方式；如`http://linguochi.com`会被重定向到`https://linguochi.com`
