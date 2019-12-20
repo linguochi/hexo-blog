@@ -98,5 +98,5 @@ app.listen(port, () => console.log(`Redirector ${port}!`));
 ### docker化
 `docker`的使用，是这次部署个人博客中最有成就感的事情。docker一直只闻其名，不知道它具体能干啥。在个人工作里面，有次我所负责的项目需要到一个完全连不了外网的服务器上部署，当时的我还不懂用docker，于是`nginx、MongoDB、Redis、node.js`等几种依赖的安装搞了一天！现在用上docker之后，把本地上的容器全打成镜像save起来，拷贝到别的服务器load后，服务就跑起来了，十分方便。
 这个博客本身，也把所有能容器化的服务都容器化了，编排在`docker-compose`里面，对我的服务器而言，它能访问外网，我所做的，就只需要把git仓库拉下来，`docker-compose up`一下就可以了。附上这个博客的搭建docker：
-[blog-docker地址](https://github.com/linguochi/blog-docker)
+[blog-docker地址](https://github.com/linguochi/blog-docker) 
 
