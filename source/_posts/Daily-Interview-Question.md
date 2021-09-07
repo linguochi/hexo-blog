@@ -1,8 +1,5 @@
 ---
-title: 前端面试每日一题精彩解析
-author: 林国池
-date: 2020-11-11 20:40:38
-tags:
+title: 前端面试每日一题精彩解析 author: 林国池 date: 2020-11-11 20:40:38 tags:
 ---
 
 # 前置知识
@@ -44,6 +41,7 @@ function test() {
     console.log(res);
   });
 }
+
 test();
 ```
 
@@ -71,11 +69,11 @@ function test() {
     const res = await square(x);
     console.log(res);
   })(
-    //forEach循环等于三个匿名函数;
-    async x => {
-      const res = await square(x);
-      console.log(res);
-    },
+      //forEach循环等于三个匿名函数;
+      async x => {
+        const res = await square(x);
+        console.log(res);
+      },
   )(1);
   (async x => {
     const res = await square(x);
@@ -99,6 +97,7 @@ async function test() {
     console.log(res);
   }
 }
+
 //等价于
 
 async function test() {
@@ -129,8 +128,8 @@ list.reduce(async (_, x) => {
 ```javascript
 function test() {
   list.reduce(
-    (pre, cur) => pre.then(() => square(cur)).then(console.log),
-    Promise.resolve(),
+      (pre, cur) => pre.then(() => square(cur)).then(console.log),
+      Promise.resolve(),
   );
 }
 
@@ -144,14 +143,12 @@ function test() {
   let promise = Promise.resolve();
   const start = Date.now();
   for (let i = 0; i < list.length; i++) {
-    promise = promise
-      .then(() => {
-        const res = square(list[i]);
-        return res;
-      })
-      .then(value => {
-        console.log(`${Date.now() - start}`, value);
-      });
+    promise = promise.then(() => {
+      const res = square(list[i]);
+      return res;
+    }).then(value => {
+      console.log(`${Date.now() - start}`, value);
+    });
   }
 }
 ```
@@ -182,11 +179,13 @@ Promise.retry = function(promiseFn, times = 3) {
     }
   });
 };
+
 function getProm() {
   const n = Math.random();
   return new Promise((resolve, reject) => {
     setTimeout(() => (n > 0.9 ? resolve(n) : reject(n)), 1000);
   });
 }
+
 Promise.retry(getProm);
 ```
